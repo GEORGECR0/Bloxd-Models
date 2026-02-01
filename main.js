@@ -269,7 +269,7 @@ captureBtn.addEventListener('click', () => {
   img.src = dataURL;
   preview.appendChild(img);
   const link = document.createElement('a');
-  link.download = 'bloxdman.png';
+  link.download = 'bloxd-model.png';
   link.href = dataURL;
   document.body.appendChild(link);
   link.click();
