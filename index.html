@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bloxd Models</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="ui">
+  <div class="window">
+    <div class="window-title">Skins</div>
+
+    <div class="skins">
+      <button class="skin-btn active" data-skin="assets/skins/Bob.png">
+        <img src="assets/preview-skins/bob.png" />
+      </button>
+
+      <button class="skin-btn" data-skin="assets/skins/Leo_2.png">
+        <img src="assets/preview-skins/Bbob.png" />
+      </button>
+
+      <button class="skin-btn" data-skin="assets/skins/Leo.png">
+        <img src="assets/preview-skins/leo.png" />
+      </button>
+
+      <button class="skin-btn" data-skin="assets/skins/lb-bob.png">
+        <img src="assets/preview-skins/Gbob.png" />
+      </button>
+
+      <button class="skin-btn" data-skin="assets/skins/purp-bob.png">
+        <img src="assets/preview-skins/Pbob.png" />
+      </button>
+
+      <button class="skin-btn" data-skin="assets/skins/Girl_skin.png">
+        <img src="assets/preview-skins/Girl.png" />
+      </button>
+
+      <button class="skin-btn" data-skin="assets/skins/Girl_skin_2.png">
+        <img src="assets/preview-skins/PGirl.png" />
+      </button>
+
+      <button class="skin-btn" data-skin="assets/skins/Zombie.png">
+        <img src="assets/preview-skins/zombie.png" />
+      </button>
+    </div>
+  </div>
+
+  <div class="window" id="parts-window">
+    <div class="window-title">Body Parts</div>
+    <div class="parts">
+      <button class="part-btn" data-part="head">Head</button>
+      <button class="part-btn" data-part="leftArm">Left Arm</button>
+      <button class="part-btn" data-part="rightArm">Right Arm</button>
+      <button class="part-btn" data-part="leftLeg">Left Leg</button>
+      <button class="part-btn" data-part="rightLeg">Right Leg</button>
+    </div>
+
+  <div class="rotation-sliders">
+    <label for="rotationX">X Rotation</label>
+    <input type="range" id="rotationX" min="-180" max="180" value="0">
+
+    <label for="rotationY">Y Rotation</label>
+    <input type="range" id="rotationY" min="-180" max="180" value="0">
+
+    <label for="rotationZ">Z Rotation</label>
+    <input type="range" id="rotationZ" min="-180" max="180" value="0">
+  </div>
+  </div>
+
+<div class="window" id="screenshot-window">
+  <div class="window-title">Screenshot</div>
+
+  <div class="screenshot-preview">
+    <span>No capture yet</span>
+  </div>
+
+  <button id="capture-btn">Capture</button>
+</div>
+
+
+
+  <div id="rotation-arrows">
+  <button id="rotate-left">◀</button>
+  <button id="rotate-right">▶</button>
+</div>
+
+</div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: system-ui, sans-serif;
+  background: #0f0f0f;
+}
+
+canvas {
+  display: block;
+}
+
+#ui {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.window {
+  pointer-events: auto;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 300px;
+
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+
+  padding: 12px;
+}
+
+.window-title {
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.skins {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.skin-btn {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 4px;
+  cursor: pointer;
+  image-rendering: pixelated;
+}
+
+.skin-btn:hover {
+  border-color: #AF434C;
+}
+
+.skin-btn img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  image-rendering: pixelated;
+}
+
+.skin-btn.active {
+  border-color: #E81123;
+  box-shadow: 0 0 0 1px #AF434C;
+}
+
+#skin-window { top: 20px; left: 20px; }
+#parts-window { top: 240px; left: 20px; }
+
+.parts {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.part-btn {
+  background: #111;
+  color: white;
+  border: 1px solid #222;
+  border-radius: 6px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.part-btn.active {
+  border-color: #E81123;
+  box-shadow: 0 0 0 1px #AF434C;
+}
+
+.rotation-sliders {
+  color: white;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rotation-sliders input[type="range"] {
+  width: 100%;
+}
+
+
+#rotation-arrows {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  pointer-events: auto;
+}
+
+#rotation-arrows button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: #303030;
+  font-size: 25px;
+  cursor: pointer;
+
+}
+
+#rotation-arrows button:hover {
+  color: #404040;
+}
+
+#screenshot-window {
+  position: absolute;
+  left: 20px;
+  top: 630px; 
+  width: 300px;
+}
+
+
+.screenshot-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+#capture-btn {
+  width: 100%;
+  padding: 6px;
+  background: #111;
+  color: white;
+  border: 1px solid #222;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#capture-btn:hover {
+  border-color: #4aa3ff;
+}
