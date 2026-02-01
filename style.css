@@ -12,22 +12,28 @@ canvas {
 #ui {
   position: fixed;
   inset: 0;
+  display: flex;
+  align-items: flex-start;
   pointer-events: none;
 }
 
-.window {
+#ui-left {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   pointer-events: auto;
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  width: 300px;
+}
 
+.window {
+  position: relative;
+  color: white;
+  width: 15%;
   background: rgba(20, 20, 20, 0.85);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-
   padding: 12px;
 }
 
@@ -69,9 +75,6 @@ canvas {
   box-shadow: 0 0 0 1px #AF434C;
 }
 
-#skin-window { top: 20px; left: 20px; }
-#parts-window { top: 240px; left: 20px; }
-
 .parts {
   display: flex;
   flex-direction: column;
@@ -104,7 +107,6 @@ canvas {
   width: 100%;
 }
 
-
 #rotation-arrows {
   position: fixed;
   bottom: 80px;
@@ -131,15 +133,8 @@ canvas {
   color: #404040;
 }
 
-#screenshot-window {
-  position: absolute;
-  left: 20px;
-  top: 630px; 
-  width: 300px;
-}
-
-
 .screenshot-preview img {
+  color: white;
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -149,6 +144,7 @@ canvas {
 #capture-btn {
   width: 100%;
   padding: 6px;
+  margin-top: 10px ;
   background: #111;
   color: white;
   border: 1px solid #222;
@@ -158,4 +154,12 @@ canvas {
 
 #capture-btn:hover {
   border-color: #4aa3ff;
+}
+
+
+@media (max-height: 700px) {
+  #ui-left {
+    overflow-y: auto;
+    max-height: calc(100vh - 40px);
+  }
 }
